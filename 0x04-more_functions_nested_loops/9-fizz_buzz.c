@@ -1,8 +1,9 @@
 #include <stdio.h>
+#include "main.h"
 /**
  * main - Write a program that prints the number and fizzbuzz
  *
- * Return: void.
+ * Return: 0 if sucess.
  */
 int main(void)
 {
