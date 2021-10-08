@@ -11,11 +11,6 @@ int main(void)
 	for (i = 1 ; i <= 100 ; i++)
 	{
 		indicador = 0;
-		if (((i % 3) == 0) && ((i % 5) == 0))
-		{
-			indicador = 1;
-			printf("FizzBuzz");
-		}
 		if ((i % 3) == 0)
 		{
 			indicador = 1;
