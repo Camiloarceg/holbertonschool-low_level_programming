@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-
-=======
 #include "main.h"
 /**
  * print_triangle - prints a triangle, followed by a new line.
@@ -29,7 +26,6 @@ void print_triangle(int size)
 		}
 		_putchar('\n');
 	}
-	if(size == 0)
+	if (size == 0)
 		_putchar('\n');
 }
->>>>>>> 378c6848663351e988d1913e70d840657dc456c8
