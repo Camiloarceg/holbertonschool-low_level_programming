@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include "main.h"
 /**
  * main - Write a program that prints the number and fizzbuzz
  *
@@ -7,26 +6,29 @@
  */
 int main(void)
 {
-	int i, indicador;
+	int i;
 
 	for (i = 1 ; i <= 100 ; i++)
 	{
-		indicador = 0;
-		if ((i % 3) == 0)
+		if ((i % 3) == 0 && (i % 5) == 0)
 		{
-			indicador = 1;
-			printf("%s", "Fizz");
+			printf("%s", "FizzBuzz");
 		}
-		if ((i % 5) == 0)
+		else if ((i % 5) == 0)
 		{
-			indicador = 1;
 			printf("%s", "Buzz");
 		}
-		if (indicador == 0)
+		else if ((i % 3) == 0)
+		{
+			printf("%s", "Fizz");
+		}
+		else
+		{
 			printf("%d", i);
-		printf(" ");
+		}
+		if (i != 100)
+			printf(" ");
 	}
-	if (i != 100)
-		printf("\n");
+	printf("\n");
 	return (0);
 }
