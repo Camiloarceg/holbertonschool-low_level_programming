@@ -9,23 +9,28 @@ void print_triangle(int size)
 {
 	int fil, col, p;
 
-	for (fil = 1 ; fil <= size ; fil++)
+	if (size > 0)
 	{
-		p = size - fil;
-		for (col = 1 ; col <= size ; col++)
+		for (fil = 0 ; fil < size ; fil++)
 		{
-			if (p > 0)
+			p = size - fil;
+			for (col = 0 ; col < size ; col++)
 			{
-				_putchar(' ');
-				p--;
+				if (p > 0)
+				{
+					_putchar(' ');
+					p--;
+				}
+				else
+				{
+					_putchar('#');
+				}
 			}
-			else
-			{
-				_putchar('#');
-			}
+			_putchar('\n');
 		}
+	}
+	else
+	{
 		_putchar('\n');
 	}
-	if (size == 0)
-		_putchar('\n');
 }
