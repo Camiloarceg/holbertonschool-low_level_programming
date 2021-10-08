@@ -11,10 +11,10 @@ void print_triangle(int size)
 
 	if (size > 0)
 	{
-		for (fil = 0 ; fil < size ; fil++)
+		for (fil = 1 ; fil <= size ; fil++)
 		{
 			p = size - fil;
-			for (col = 0 ; col < size ; col++)
+			for (col = 1 ; col <= size ; col++)
 			{
 				if (p > 0)
 				{
