@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "main.h"
 /**
  * main - Write a program that prints the number and fizzbuzz
  *
@@ -26,7 +27,7 @@ int main(void)
 		{
 			printf("%d", i);
 		}
-		if (i != 100)
+		if (i == 100)
 			printf(" ");
 	}
 	printf("\n");
