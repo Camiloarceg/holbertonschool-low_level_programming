@@ -71,3 +71,7 @@ My first project on the C lenguage for programming, the learning objetives are:
 - How to use strings and how to manipulate them
 - Scope of variables
 
+## 0x06. C - More pointers, arrays and strings ##
+
+- More pointers, arrays and strings.
+
