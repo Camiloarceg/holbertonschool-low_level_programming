@@ -7,35 +7,27 @@
  */
 char *cap_string(char *p)
 {
-	int cap = 0;
-	int count = 0;
-	int i;
-	int alert[] = {32, 9, 10, 44, 59, 46, 33, 63, 34, 40, 41, 123, 125};
+	int i, m;
+	char alert[] = {' ', '\n', '\t', ',', ';', '.',
+		     '!', '?', '"', '(', ')', '}', '{', '}'};
 
-	while (*p != '\0')
+	for (i = 0; p[i] != '\0'; i++)
 	{
-		for (i = 0 ; i <= 13 ; i++)
+		if (i == 0)
 		{
-			if (*p == alert[i])
-				cap = 1;
+			if ((p[i] >= 'a' && p[i] <= 'z'))
+				p[i] = p[i] - 32;
 		}
-		p++;
-		if ((cap == 1) && ((*p >= 97 && *p <= 122)))
+		for (m = 0; alert[m] != '\0'; m++)
 		{
-			*p = *p - 32;
-			cap = 0;
+			if (p[i] == alert[m])
+			{
+				i++;
+				if (p[i] >= 'a' && p[i] <= 'z')
+					p[i] = p[i] - 32;
+				i--;
+			}
 		}
-		if ((cap == 1) && !(*p >= 97 && *p <= 122))
-		{
-			cap = 0;  
-		}
-		count += 1;
 	}
-	while (count > 0)
-	{
-		p--;
-		count--;
-	}
-
 	return (p);
 }
