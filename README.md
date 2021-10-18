@@ -75,3 +75,8 @@ My first project on the C lenguage for programming, the learning objetives are:
 
 - More pointers, arrays and strings.
 
+## 0x07. C - Even more pointers, arrays and strings ##
+
+- Even more pointers, arrays and strings.
+
+
