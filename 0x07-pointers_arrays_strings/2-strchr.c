@@ -17,6 +17,10 @@ char *_strchr(char *s, char c)
 			break;
 		}
 	}
-	s = &s[i];
-	return (s);
+	if (s[i] == c)
+	{
+		s = &s[i];
+		return (s);
+	}
+	return ('\0');
 }
