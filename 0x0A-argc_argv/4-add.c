@@ -13,7 +13,7 @@ int main(int argc, char **argv)
 
 	if (argc < 1)
 	{
-		printf("%s\n", "0");
+		printf("0\n");
 		return (0);
 	}
 	for (i = 1 ; i < argc ; i++)
@@ -22,7 +22,7 @@ int main(int argc, char **argv)
 		{
 			if (atoi(argv[i]) == 0)
 			{
-				printf("%s\n", "Error");
+				printf("Error\n");
 				return (1);
 			}
 			sum += atoi(argv[i]);
