@@ -86,3 +86,9 @@ My first project on the C lenguage for programming, the learning objetives are:
 - In what situations you should implement recursion
 - In what situations you shouldn’t implement recursion
 
+# 0x0A. C - argc, argv #
+
+- How to use arguments passed to your program
+- What are two prototypes of main that you know of, and in which case do you use one or the other
+- How to use __attribute__((unused)) or (void) to compile functions with unused variables or parameters
+
