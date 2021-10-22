@@ -4,7 +4,6 @@
  * main - main function prints the name of the program.
  *@argc: arguments count.
  *@argv: arguments array.
- *
  * Return: 0 if sucess.
  */
 int main(int argc, char *argv[])
