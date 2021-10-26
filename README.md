@@ -97,3 +97,10 @@ My first project on the C lenguage for programming, the learning objetives are:
 - What is a static library, how does it work, how to create one, and how to use it
 - Basic usage of ar, ranlib, nm
 
+## 0x0B. C - malloc, free ##
+
+- What is the difference between automatic and dynamic allocation
+- What is malloc and free and how to use them
+- Why and when use malloc
+- How to use valgrind to check for memory leak
+
