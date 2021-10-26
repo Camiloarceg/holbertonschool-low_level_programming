@@ -24,45 +24,26 @@ int elmayor(int len1, int len2)
  */
 char *str_concat(char *s1, char *s2)
 {
-	int i, len1 = 0, len2 = 0;
-	char *p;
+	int i, len1, len2;
+	char  *p;
 
-	if (s1 == 0 && s2 == 0)
-		return ("");
 	if (s1 == 0)
-	{
-		len1 = 0;
-		len2 += 1;
-	}
-	else
-	{
-		for (i = 0 ; s1[i] != '\0' ; i++)
-		{
-		}
-		len1 += i;
-	}
+		s1 = "";
 	if (s2 == 0)
-	{
-		len2 = 0;
-		len1 += 1;
-	}
-	else
-	{
-		for (i = 0 ; s2[i] != '\0' ; i++)
-		{
-		}
-		len2 += i;
-	}
-	p = (char *)malloc((len1 + len2) * sizeof(char) + 1);
+		s2 = "";
+	for (len1 = 0 ; s1[len1] != '\0' ; len1++)
+	{}
+	for (len2 = 0 ; s2[len2] != '\0' ; len2++)
+	{}
+	p = (char *)malloc((len1 + len2 + 1) * sizeof(char));
 	if (p == 0)
 		return (0);
 	for (i = 0 ; i < elmayor(len1, len2) ; i++)
 	{
-		if (i < len1 && len1 > 0)
+		if (i <= len1)
 			p[i] = s1[i];
-		if (i < len2 && len2 > 0)
+		if (i <= len2)
 			p[len1 + i] = s2[i];
 	}
 	return (p);
 }
-
