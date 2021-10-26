@@ -40,7 +40,7 @@ char *str_concat(char *s1, char *s2)
 		return (0);
 	for (i = 0 ; i < elmayor(len1, len2) ; i++)
 	{
-		if (i <= len1)
+		if (i < len1)
 			p[i] = s1[i];
 		if (i <= len2)
 			p[len1 + i] = s2[i];
