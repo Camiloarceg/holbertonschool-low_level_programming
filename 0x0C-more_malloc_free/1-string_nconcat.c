@@ -39,8 +39,8 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (n < len2)
 		len2 = n;
 	p = malloc(sizeof(*p) * (len1 + len2 + 1));
-	if (p == 0)
-		return (0);
+	if (p == NULL)
+		return (NULL);
 	for (i = 0 ; i < elmayor(len1, len2) ; i++)
 	{
 		if (i < len1)
