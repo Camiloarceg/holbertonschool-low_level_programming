@@ -1,51 +1,57 @@
-#include "main.h"
 #include <stdlib.h>
+#include "main.h"
 /**
- *  * string_nconcat - concatenates two strings.
- *   *
- *    * @s1: First string.
- *     * @s2: Second string.
- *      * @n: Number of bytes to take from @s2.
- *       *
- *        * Return: If the function fails, return NULL.
- *         *         Else, return the concatenated string.
+ * elmayor - return the greater int.
+ *@len1: int 1
+ *@len2: int 2
+ *
+ * Return: the greater
  */
-
+unsigned int elmayor(int len1, int len2)
+{
+	if (len1 > len2)
+		return (len1 + 1);
+	else
+		return (len2 + 1);
+	return (0);
+}
+/**
+ * string_nconcat - concatenates two strings.
+ *@s1: 1 string
+ *@s2: 2 string
+ *@n: n first bytes of s2
+ *
+ * Return: a pointer to the new allocated string.
+ */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	char *str;
-	unsigned int i, j;
+	unsigned int len1, len2, i;
+	char *p;
 
-	i = j = 0;
-
-	if (s1 == 0)
+	if (s1 == NULL)
 		s1 = "";
-
-	if (s2 == 0)
+	if (s2 == NULL)
 		s2 = "";
-
-	while (s1[i] != '\0')
-		i++;
-
-	while (s2[j] != '\0')
-		j++;
-
-	if (n > j)
-		n = j;
-
-	str = (char *) malloc(sizeof(char) * i + (n + 1));
-
-	if (str == 0)
-		return (0);
-
-	for (i = 0; s1[i] != '\0'; i++)
-		str[i] = s1[i];
-
-	for (j = 0; j < n; j++, i++)
-		str[i] = s2[j];
-
-	str[i] = '\0';
-
-	return (str);
-
+	for (len1 = 0 ; s1[len1] != '\0' ; len1++)
+	{}
+	for (len2 = 0 ; s2[len2] != '\0' ; len2++)
+	{}
+	if (n < len2)
+		len2 = n;
+	p = malloc(sizeof(*p) * (len1 + len2 + 1));
+	if (p != NULL)
+	{
+		for (i = 0 ; i < elmayor(len1, len2) ; i++)
+		{
+			if (i < len1)
+				p[i] = s1[i];
+			if (i < len2)
+				p[len1 + i] = s2[i];
+			if (i == len2)
+				p[len1 + i] = '\0';
+		}
+	}
+	else
+		return (NULL);
+	return (p);
 }
