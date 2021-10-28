@@ -39,16 +39,19 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (n < len2)
 		len2 = n;
 	p = malloc(sizeof(*p) * (len1 + len2 + 1));
-	if (p == NULL)
-		return (NULL);
-	for (i = 0 ; i < elmayor(len1, len2) ; i++)
+	if (p != NULL)
 	{
-		if (i < len1)
-			p[i] = s1[i];
-		if (i < len2)
-			p[len1 + i] = s2[i];
-		if (i == len2)
-			p[len1 + i] = '\0';
+		for (i = 0 ; i < elmayor(len1, len2) ; i++)
+		{
+			if (i < len1)
+				p[i] = s1[i];
+			if (i < len2)
+				p[len1 + i] = s2[i];
+			if (i == len2)
+				p[len1 + i] = '\0';
+		}
 	}
+	else
+		return (NULL);
 	return (p);
 }
