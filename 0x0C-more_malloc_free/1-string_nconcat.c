@@ -25,7 +25,7 @@ unsigned int elmayor(int len1, int len2)
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	unsigned int len1, len2, i;
+	unsigned int len1, len2, i, j;
 	char *p;
 
 	if (s1 == NULL)
@@ -41,17 +41,13 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	p = malloc(sizeof(*p) * (len1 + len2 + 1));
 	if (p != NULL)
 	{
-		for (i = 0 ; i < elmayor(len1, len2) ; i++)
-		{
-			if (i < len1)
-				p[i] = s1[i];
-			if (i < len2)
-				p[len1 + i] = s2[i];
-			if (i == len2)
-				p[len1 + i] = '\0';
-		}
+		for (i = 0 ; i != '\0' ; i++)
+			p[i] = s1[i];
+		for (j = 0 ; j < len2 ; j++)
+			p[i + j] = s2[j];
+		p[i + j] = '\0';
+		return (p);
 	}
 	else
 		return (NULL);
-	return (p);
 }
