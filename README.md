@@ -109,3 +109,9 @@ My first project on the C lenguage for programming, the learning objetives are:
 - How to use the exit function
 - What are the functions calloc and realloc from the standard library and how to use them
 
+## 0x0D. C - Preprocessor ##
+
+- What are macros and how to use them
+- What are the most common predefined macros
+- How to include guard your header files
+
