@@ -115,3 +115,7 @@ My first project on the C lenguage for programming, the learning objetives are:
 - What are the most common predefined macros
 - How to include guard your header files
 
+## 0x0E. C - Structures, typedef ##
+- What are structures, when, why and how to use them
+- How to use typedef
+
