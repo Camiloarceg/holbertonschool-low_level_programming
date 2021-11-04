@@ -1,7 +1,7 @@
 #include "variadic_functions.h"
 #include <stdio.h>
 /**
- * print_char - function that prints char
+ * print_c - function that prints char
  * @e: va_list.
  * Return: void
  */
@@ -11,7 +11,7 @@ void print_c(va_list e)
 }
 
 /**
- * print_int - function that prints int
+ * print_i - function that prints int
  * @e: va_list
  * Return: void
  */
@@ -21,7 +21,7 @@ void print_i(va_list e)
 }
 
 /**
- * print_float - Function that prints float
+ * print_f - Function that prints float
  * @e: va_list
  * Return: void
  */
@@ -31,7 +31,7 @@ void print_f(va_list e)
 }
 
 /**
- * print_string - function that prints string
+ * print_s - function that prints string
  * @e: va_list
  * Return: void
  */
@@ -82,7 +82,4 @@ void print_all(const char * const format, ...)
 	}
 	printf("\n");
 	va_end(ap);
-
-
-
 }
