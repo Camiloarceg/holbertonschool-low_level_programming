@@ -9,7 +9,6 @@
  */
 typedef struct Formats
 {
-
 	char *format;
 	void (*func)();
 }format;
