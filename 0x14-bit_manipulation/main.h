@@ -1,5 +1,8 @@
 #ifndef MAIN
 #define MAIN
+#include <stdlib.h>
+int _strlen_recursion(const char *s);
+int _pow_recursion(int x, int y);
 int _putchar(char c);
 unsigned int binary_to_uint(const char *b);
 void print_binary(unsigned long int n);
