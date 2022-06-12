@@ -48,9 +48,14 @@ int recursive_search(int *array, int left, int right, int value)
 	int mid;
 
 	print_array(array, left, right);
-	if (left >= right)
-		return (-1);
 	mid = (left + right) / 2;
+	if (left >= right)
+	{
+		if (value == array[mid])
+			return (mid);
+		else
+			return (-1);
+	}
 	if (value == array[mid])
 		return (mid);
 	else if (value < array[mid])
