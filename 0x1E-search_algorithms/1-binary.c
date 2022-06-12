@@ -48,6 +48,7 @@ int recursive_search(int *array, int left, int right, int value)
 {
 	int mid;
 
+	print_array(array, left, right);
 	if (left >= right)
 		return (-1);
 	mid = (left + right) / 2;
@@ -57,6 +58,5 @@ int recursive_search(int *array, int left, int right, int value)
 		right = mid - 1;
 	else
 		left = mid + 1;
-	print_array(array, left, right);
 	return (recursive_search(array, left, right, value));
 }
